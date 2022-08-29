@@ -264,10 +264,6 @@ html {
     align-self: start;
 }
 
-.lead-magnet__title_highlighted {
-    color: #72cfec;
-}
-
 @media (max-width: 1023px) {
     .secure-transactions__text_underline::after {
         bottom: -30px;        
