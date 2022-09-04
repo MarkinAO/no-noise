@@ -280,8 +280,8 @@ html {
 }
 
 .secure-transactions__img {
-    width: 630px;
-    flex: 0 0 auto;
+    width: 630px;    
+    max-width: 50%;
 }
 
 .old-place {
@@ -292,12 +292,21 @@ html {
     display: none;
 }
 
+.secure-transactions__text_underline:nth-child(1) {
+    max-width: 520px;
+    margin-bottom: 50px;
+}
+
+.secure-transactions__img_left + .secure-transactions__text_underline {
+    margin-top: 32px;
+}
+
 .secure-transactions__img_right {    
-    margin-left: 140px;
+    margin-left: 30px;
 }
 
 .secure-transactions__img_left {
-    width: 510px;
+    width: 510px;    
 }
 
 .secure-transactions__list-title {
@@ -370,12 +379,12 @@ html {
         max-width: 850px;
     }
 
-    .secure-transactions__text_underline {
-        min-width: 300px;
-    }
-
     .secure-transactions__text_underline::after {
         bottom: -30px;        
+    }
+
+    .secure-transactions__text_underline:nth-child(1) {
+        margin-bottom: 0;
     }
 
     .secure-transactions__content-row {
@@ -535,6 +544,13 @@ html {
     }
 }
 
+@media (max-width: 660px) {
+    .secure-transactions__content-row {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
 @media (max-width: 545px) {
     .inner_mobile {
         padding-left: 20px;
@@ -562,10 +578,6 @@ html {
         margin-top: 0;
     }
 
-    .secure-transactions__text_underline {
-        min-width: 200px;
-    }
-
     .secure-transactions__img {
         margin: 25px auto 40px;
     }
@@ -580,7 +592,20 @@ html {
     
     .secure-transactions__list-item {        
         max-width: 100%;        
-    }    
+    }
+    
+    .old-place {        
+        display: none;
+    }
+    
+    .new-place {        
+        display: block;
+    }
+
+    .l-2-col_1fr {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 }
 
 @media (max-width: 359px) {
@@ -642,14 +667,6 @@ html {
         max-width: 250px;
     }
 
-    .old-place {        
-        display: none;
-    }
-    
-    .new-place {        
-        display: block;
-    }
-
     .secure-transactions__list {
         margin-bottom: 45px;
     }
@@ -673,12 +690,7 @@ html {
 
     .lead-magnet-form {
         margin-top: 90px;
-    }
-
-    .l-2-col_1fr {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
+    }    
 
     .lead-magnet__title {        
         font-weight: 700;
